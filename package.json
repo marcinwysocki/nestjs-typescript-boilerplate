@@ -5,6 +5,7 @@
     "license": "MIT",
     "scripts": {
         "start": "nodemon",
+        "test": "jest --coverage",
         "prestart:prod": "tsc",
         "start:prod": "node dist/server.js",
         "precommit": "lint-staged",
@@ -14,7 +15,19 @@
         "*.ts": [
             "tslint --fix",
             "prettify",
+            "test",
             "git add"
+        ]
+    },
+    "jest": {
+        "transform": {
+            ".ts": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+        },
+        "testRegex": "src/.*\\.spec\\.ts",
+        "moduleFileExtensions": [
+            "ts",
+            "js",
+            "json"
         ]
     },
     "dependencies": {
@@ -32,11 +45,14 @@
     },
     "devDependencies": {
         "@types/express": "^4.0.36",
+        "@types/jest": "^20.0.2",
         "@types/node": "^7.0.5",
         "husky": "^0.14.1",
+        "jest-cli": "^20.0.4",
         "lint-staged": "^4.0.0",
         "nodemon": "^1.11.0",
         "prettier": "^1.4.4",
+        "ts-jest": "^20.0.6",
         "ts-node": "^2.1.0",
         "tslint": "^5.4.3",
         "tslint-config-prettier": "^1.1.0"
