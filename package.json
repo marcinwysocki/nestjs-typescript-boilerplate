@@ -1,7 +1,7 @@
 {
-    "name": "cash-tracker-api",
+    "name": "nestjs-typescript-boilerplate",
     "version": "0.1.0",
-    "description": "Cash tracker API",
+    "description": "A TypeScript boilerplate for Nest, including nodemon, TSLint and Prettier (for now).",
     "license": "MIT",
     "scripts": {
         "start": "nodemon",
