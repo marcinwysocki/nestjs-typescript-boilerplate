@@ -1,8 +1,7 @@
 [![Nest Logo](http://kamilmysliwiec.com/public/nest-logo.png)](http://kamilmysliwiec.com/)
 
-A <img src="https://github.com/remojansen/logo.ts/blob/master/ts.png?raw=true" width="18"> boilerplate for [Nest](https://github.com/kamilmysliwiec/nest), including 
-nodemon, TSLint 
-and Prettier (for now).
+An opinionated TypeScript boilerplate for [Nest](https://github.com/kamilmysliwiec/nest), including 
+nodemon, TSLint, Prettier, Jest and Conventional Commits-based changelog (not yet).
 
 ## Installation
 
@@ -16,6 +15,17 @@ $ npm install
 $ npm run start
 ```
 
+## Test
+
+```
+$ npm run test
+$ npm run test:watch
+```
+
 ## Links
 
 - Nest's Website - [http://nestjs.com](http://nestjs.com/)
+
+## License
+
+MIT
