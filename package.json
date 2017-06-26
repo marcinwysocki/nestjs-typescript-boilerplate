@@ -6,6 +6,7 @@
     "scripts": {
         "start": "nodemon",
         "test": "jest --coverage",
+        "test:watch": "jest --coverage --watch",
         "prestart:prod": "tsc",
         "start:prod": "node dist/server.js",
         "precommit": "lint-staged",
@@ -28,7 +29,8 @@
             "ts",
             "js",
             "json"
-        ]
+        ],
+        "mapCoverage": true
     },
     "dependencies": {
         "@nestjs/common": "*",
