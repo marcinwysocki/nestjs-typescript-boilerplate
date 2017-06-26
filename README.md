@@ -1,6 +1,8 @@
 [![Nest Logo](http://kamilmysliwiec.com/public/nest-logo.png)](http://kamilmysliwiec.com/)
 
-<img src="https://github.com/remojansen/logo.ts/blob/master/ts.png?raw=true" width="18">  TypeScript Starter repository for [Nest](https://github.com/kamilmysliwiec/nest) framework.
+A <img src="https://github.com/remojansen/logo.ts/blob/master/ts.png?raw=true" width="18"> boilerplate for [Nest](https://github.com/kamilmysliwiec/nest), including 
+nodemon, TSLint 
+and Prettier (for now).
 
 ## Installation
 
@@ -14,7 +16,6 @@ $ npm install
 $ npm run start
 ```
 
-## People
+## Links
 
-- Author - [Kamil Myśliwiec](http://kamilmysliwiec.com)
-- Website - [http://nestjs.com](http://nestjs.com/)
+- Nest's Website - [http://nestjs.com](http://nestjs.com/)
