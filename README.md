@@ -7,28 +7,34 @@ nodemon, TSLint, Prettier, Jest and Conventional Commits-based changelog.
 
 Using [`nest-cli`](https://github.com/nestjs/nest-cli):
 
-```
+```bash
 $ nest new my-app -r https://github.com/marcinwysocki/nestjs-typescript-boilerplate
 ```
 Cloning the repo manually:
 
-```
+```bash
 $ git clone https://github.com/marcinwysocki/nestjs-typescript-boilerplate my-app
 $ cd my-app
 $ rm -rf .git
 ```
 
+## Installation
+
+```bash
+$ yarn #or npm install, if you prefer
+```
+
 ## Start
 
-```
-$ npm run start
+```bash
+$ yarn start
 ```
 
 ## Test
 
-```
-$ npm run test
-$ npm run test:watch
+```bash
+$ yarn test
+$ yarn test:watch
 ```
 
 ## Links
