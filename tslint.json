@@ -1,13 +1,40 @@
 {
     "defaultSeverity": "error",
     "extends": [
-        "tslint:latest",
-        "tslint-config-prettier"
+        "tslint:latest"
     ],
     "jsRules": {},
     "rules": {
         "no-console": [
             "log"
+        ],
+        "quotemark": [
+            "single",
+            "avoid-escape"
+        ],
+        "class-name": true,
+        "interface-name": [
+            "always-prefix"
+        ],
+        "eofline": true,
+        "indent": [
+            true
+        ],
+        "whitespace": [
+            true, 
+            "check-decl",
+            "check-module",
+            "check-separator",
+            "check-branch",
+            "check-preblock",
+            "check-operator"
+        ],
+        "adjacent-overload-signatures": true,
+        "variable-name": [
+            true,
+            "check-format",
+            "allow-leading-underscore",
+            "ban-keywords"
         ]
     },
     "rulesDirectory": []

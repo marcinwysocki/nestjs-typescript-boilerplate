@@ -3,10 +3,19 @@
 An opinionated TypeScript boilerplate for [Nest](https://github.com/kamilmysliwiec/nest), including 
 nodemon, TSLint, Prettier, Jest and Conventional Commits-based changelog (not yet).
 
-## Installation
+## Setup
+
+Using [`nest-cli`](https://github.com/nestjs/nest-cli):
 
 ```
-$ npm install
+$ nest new my-app -r https://github.com/marcinwysocki/nestjs-typescript-boilerplate
+```
+Cloning the repo manually:
+
+```
+$ git clone https://github.com/marcinwysocki/nestjs-typescript-boilerplate my-app
+$ cd my-app
+$ rm -rf .git
 ```
 
 ## Start

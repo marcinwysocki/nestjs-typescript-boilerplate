@@ -4,17 +4,21 @@
     "description": "A TypeScript boilerplate for Nest, including nodemon, TSLint and Prettier (for now).",
     "license": "MIT",
     "scripts": {
+        "clean": "rm -rf node_modules coverage dist",
         "start": "nodemon",
         "test": "jest --coverage",
         "test:watch": "jest --coverage --watch",
+        "lint": "tslint -c tslint.json 'src/**/*.ts'",
         "prestart:prod": "tsc",
         "start:prod": "node dist/server.js",
         "precommit": "lint-staged",
+        "prepare": "yarn prestart:prod && yarn test",
+        "prepublish": "yarn lint && yarn test",
         "prettify": "prettier --write --trailing-comma all --single-quote --tab-width 4 --parser typescript"
     },
     "lint-staged": {
         "*.ts": [
-            "tslint --fix",
+            "tslint -c tslint.json --fix",
             "prettify",
             "test",
             "git add"
