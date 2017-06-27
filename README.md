@@ -1,7 +1,7 @@
 [![Nest Logo](http://kamilmysliwiec.com/public/nest-logo.png)](http://kamilmysliwiec.com/)
 
 An opinionated TypeScript boilerplate for [Nest](https://github.com/kamilmysliwiec/nest), including 
-nodemon, TSLint, Prettier, Jest and Conventional Commits-based changelog (not yet).
+nodemon, TSLint, Prettier, Jest and Conventional Commits-based changelog.
 
 ## Setup
 
