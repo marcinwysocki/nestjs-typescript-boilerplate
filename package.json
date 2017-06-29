@@ -9,18 +9,20 @@
         "test": "jest --coverage",
         "test:watch": "jest --coverage --watch",
         "lint": "tslint -c tslint.json 'src/**/*.ts'",
+        "lint:fix": "yarn lint -- --fix",
         "prestart:prod": "tsc",
         "start:prod": "node dist/server.js",
         "precommit": "lint-staged",
         "prepare": "yarn prestart:prod && yarn test",
         "prepublish": "yarn lint && yarn test",
         "release": "standard-version",
-        "prettify": "prettier --write --trailing-comma all --single-quote --tab-width 4 --parser typescript"
+        "prettify:staged": "prettier --write --trailing-comma all --single-quote --tab-width 4 --parser typescript",
+        "prettify": "yarn prettify:staged -- '\"src/**/*.ts\"'"
     },
     "lint-staged": {
         "*.ts": [
             "tslint -c tslint.json --fix",
-            "prettify",
+            "prettify:staged",
             "test",
             "git add"
         ]
