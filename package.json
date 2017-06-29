@@ -1,70 +1,70 @@
 {
-    "name": "nestjs-typescript-boilerplate",
-    "version": "0.1.0",
-    "description": "A TypeScript boilerplate for Nest, including nodemon, TSLint and Prettier (for now).",
-    "license": "MIT",
-    "scripts": {
-        "clean": "rm -rf node_modules coverage dist",
-        "start": "nodemon",
-        "test": "jest --coverage",
-        "test:watch": "jest --coverage --watch",
-        "lint": "tslint -c tslint.json 'src/**/*.ts'",
-        "lint:fix": "yarn lint -- --fix",
-        "prestart:prod": "tsc",
-        "start:prod": "node dist/server.js",
-        "precommit": "lint-staged",
-        "prepare": "yarn prestart:prod && yarn test",
-        "prepublish": "yarn lint && yarn test",
-        "release": "standard-version",
-        "prettify:staged": "prettier --write --trailing-comma all --single-quote --tab-width 4 --parser typescript",
-        "prettify": "yarn prettify:staged -- '\"src/**/*.ts\"'"
+  "name": "nestjs-typescript-boilerplate",
+  "version": "0.2.0",
+  "description": "A TypeScript boilerplate for Nest, including nodemon, TSLint and Prettier (for now).",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf node_modules coverage dist",
+    "start": "nodemon",
+    "test": "jest --coverage",
+    "test:watch": "jest --coverage --watch",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "lint:fix": "yarn lint -- --fix",
+    "prestart:prod": "tsc",
+    "start:prod": "node dist/server.js",
+    "precommit": "lint-staged",
+    "prepare": "yarn prestart:prod && yarn test",
+    "prepublish": "yarn lint && yarn test",
+    "release": "standard-version",
+    "prettify:staged": "prettier --write --trailing-comma all --single-quote --tab-width 4 --parser typescript",
+    "prettify": "yarn prettify:staged -- '\"src/**/*.ts\"'"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "tslint -c tslint.json --fix",
+      "prettify:staged",
+      "test",
+      "git add"
+    ]
+  },
+  "jest": {
+    "transform": {
+      ".ts": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "lint-staged": {
-        "*.ts": [
-            "tslint -c tslint.json --fix",
-            "prettify:staged",
-            "test",
-            "git add"
-        ]
-    },
-    "jest": {
-        "transform": {
-            ".ts": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-        },
-        "testRegex": "src/.*\\.spec\\.ts",
-        "moduleFileExtensions": [
-            "ts",
-            "js",
-            "json"
-        ],
-        "mapCoverage": true
-    },
-    "dependencies": {
-        "@nestjs/common": "*",
-        "@nestjs/core": "*",
-        "@nestjs/microservices": "*",
-        "@nestjs/testing": "*",
-        "@nestjs/websockets": "*",
-        "express": "^4.15.3",
-        "morgan": "^1.8.2",
-        "redis": "^2.7.1",
-        "reflect-metadata": "^0.1.10",
-        "rxjs": "^5.4.0",
-        "typescript": "^2.2.1"
-    },
-    "devDependencies": {
-        "@types/express": "^4.0.36",
-        "@types/jest": "^20.0.2",
-        "@types/node": "^7.0.5",
-        "husky": "^0.14.1",
-        "jest-cli": "^20.0.4",
-        "lint-staged": "^4.0.0",
-        "nodemon": "^1.11.0",
-        "prettier": "^1.4.4",
-        "standard-version": "^4.2.0",
-        "ts-jest": "^20.0.6",
-        "ts-node": "^2.1.0",
-        "tslint": "^5.4.3",
-        "tslint-config-prettier": "^1.1.0"
-    }
+    "testRegex": "src/.*\\.spec\\.ts",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "mapCoverage": true
+  },
+  "dependencies": {
+    "@nestjs/common": "*",
+    "@nestjs/core": "*",
+    "@nestjs/microservices": "*",
+    "@nestjs/testing": "*",
+    "@nestjs/websockets": "*",
+    "express": "^4.15.3",
+    "morgan": "^1.8.2",
+    "redis": "^2.7.1",
+    "reflect-metadata": "^0.1.10",
+    "rxjs": "^5.4.0",
+    "typescript": "^2.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.0.36",
+    "@types/jest": "^20.0.2",
+    "@types/node": "^7.0.5",
+    "husky": "^0.14.1",
+    "jest-cli": "^20.0.4",
+    "lint-staged": "^4.0.0",
+    "nodemon": "^1.11.0",
+    "prettier": "^1.4.4",
+    "standard-version": "^4.2.0",
+    "ts-jest": "^20.0.6",
+    "ts-node": "^2.1.0",
+    "tslint": "^5.4.3",
+    "tslint-config-prettier": "^1.1.0"
+  }
 }
