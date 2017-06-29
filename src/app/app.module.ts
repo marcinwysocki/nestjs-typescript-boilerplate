@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 
-import { HelloModule } from './hello/hello.module';
+import { HelloModule } from './modules/hello/hello.module';
 
 @Module({
     modules: [HelloModule],
