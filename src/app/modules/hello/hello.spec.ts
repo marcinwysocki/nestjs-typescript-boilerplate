@@ -1,18 +1,20 @@
 import { HttpException } from '@nestjs/core';
 import { Test } from '@nestjs/testing';
+
 import { HelloController } from './hello.controller';
 import { HelloService } from './hello.service';
 
 describe('HelloModule', () => {
     describe('HelloService', () => {
         let service: HelloService;
-        beforeEach(() => {
-            Test.createTestingModule({
+
+        beforeEach(async () => {
+            const module = await Test.createTestingModule({
                 components: [HelloService],
                 controllers: [HelloController],
-            });
+            }).compile();
 
-            service = Test.get(HelloService);
+            service = module.get<HelloService>(HelloService);
         });
 
         it('greets everybody', async () => {
