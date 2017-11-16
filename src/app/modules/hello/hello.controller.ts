@@ -1,4 +1,13 @@
-import { Controller, Get, HttpStatus, Param, Response } from '@nestjs/common';
+import {
+    Body,
+    Controller,
+    Get,
+    HttpStatus,
+    Param,
+    Post,
+    Response,
+} from '@nestjs/common';
+import { GreetingDto } from '../../dto/GreetingDto';
 import { HelloService } from './hello.service';
 
 @Controller('hello')
@@ -16,5 +25,15 @@ export class HelloController {
         const greetings = await this.helloService.sayHelloToSomeone(name);
 
         res.status(HttpStatus.OK).json(greetings);
+    }
+
+    @Post('/greeting')
+    public async postSomething(
+        @Response() res,
+        @Body() { body, prefix, suffix }: GreetingDto,
+    ) {
+        res
+            .status(HttpStatus.CREATED)
+            .json({ greeting: `${prefix},\n${body}\n${suffix}` });
     }
 }
