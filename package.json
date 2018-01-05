@@ -40,12 +40,13 @@
     "mapCoverage": true
   },
   "dependencies": {
-    "@nestjs/common": "^4.0.0",
-    "@nestjs/core": "^4.0.0",
-    "@nestjs/microservices": "^4.0.0",
-    "@nestjs/testing": "^4.0.0",
-    "@nestjs/websockets": "^4.0.0",
+    "@nestjs/common": "^4.4.0",
+    "@nestjs/core": "^4.4.0",
+    "@nestjs/microservices": "^4.4.0",
+    "@nestjs/testing": "^4.4.0",
+    "@nestjs/websockets": "^4.4.0",
     "body-parser": "^1.18.2",
+    "class-validator": "^0.7.3",
     "express": "^4.15.3",
     "morgan": "^1.8.2",
     "redis": "^2.7.1",
