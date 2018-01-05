@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.0"></a>
+# [0.3.0](https://github.com/marcinwysocki/nestjs-typescript-boilerplate/compare/v0.2.0...v0.3.0) (2018-01-05)
+
+
+### Features
+
+* added body-parser ([8487bd1](https://github.com/marcinwysocki/nestjs-typescript-boilerplate/commit/8487bd1))
+* added validation to the controller ([4cb0b9c](https://github.com/marcinwysocki/nestjs-typescript-boilerplate/commit/4cb0b9c))
+* migrated to Nest v4 ([be49f29](https://github.com/marcinwysocki/nestjs-typescript-boilerplate/commit/be49f29))
+
+
+
 <a name="0.2.0"></a>
 # [0.2.0](https://github.com/marcinwysocki/nestjs-typescript-boilerplate/compare/v0.1.0...v0.2.0) (2017-06-29)
 
